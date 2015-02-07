@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cwd=$(pwd)
+
+rm /tmp/.copy_tmp
+
+for var in "$@"
+do
+    echo "$cwd/$var" >> /tmp/.copy_tmp
+done

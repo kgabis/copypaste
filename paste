@@ -1,0 +1,3 @@
+#!/bin/bash
+
+while read -r line; do cp $line .; done < /tmp/.copy_tmp
