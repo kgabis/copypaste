@@ -6,12 +6,25 @@ copyfile="/tmp/copypaste.$USER"
 touch $copyfile
 rm $copyfile
 
+if [[ $# -eq 0 ]];
+then
+    echo "Nothing to copy!"
+    exit
+fi
+
 for var in "$@"
 do
     if [[ "$var" = /* ]];
     then
-	echo "$var" >> $copyfile
+	filename="$var"
     else
-	echo "$cwd/$var" >> $copyfile
+	filename="$cwd/$var"
+    fi
+    
+    if [ ! -f "$filename" ];
+    then
+	echo "$filename: File not found!"
+    else
+	echo "$filename" >> $copyfile	
     fi
 done
