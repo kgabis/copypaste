@@ -4,5 +4,5 @@ copyfile="/tmp/copypaste.$USER"
 
 while read -r line;
 do
-    cp $line .;
+    cp -a $line .;
 done < $copyfile
