@@ -1,15 +1,17 @@
 #!/bin/bash
 
 cwd=$(pwd)
+copyfile="/tmp/copypaste.$USER"
 
-rm /tmp/.copy_tmp
+touch $copyfile
+rm $copyfile
 
 for var in "$@"
 do
     if [[ "$var" = /* ]];
     then
-	echo "$var" >> /tmp/.copy_tmp
+	echo "$var" >> $copyfile
     else
-	echo "$cwd/$var" >> /tmp/.copy_tmp
+	echo "$cwd/$var" >> $copyfile
     fi
 done
