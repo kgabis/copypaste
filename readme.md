@@ -2,8 +2,8 @@
 Simple terminal util for copying and pasting files
 
 ##Usage
-```copy foo bar``` Copy foo and bar  
-```paste``` Paste foo and bar in current working directory
+```ccopy foo bar``` Copy foo and bar  
+```cpaste``` Paste foo and bar in current working directory
 
 
 ##License
