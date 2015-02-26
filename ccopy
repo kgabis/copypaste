@@ -18,10 +18,7 @@ do
     else                       # Relative path
     	filename="$cwd/$var"
     fi
-    
-    if [ ! -f "$filename" ]; then
-    	echo "$filename: File not found!"
-    else
-	    echo "$filename" >> $copyfile	
-    fi
+
+    echo "Copying $filename"
+    echo "$filename" >> $copyfile	
 done
